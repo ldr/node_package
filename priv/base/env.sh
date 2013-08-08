@@ -243,7 +243,7 @@ get_pid() {
 cuttlefish() {
     ## TODO: Anything resembling actual code
     ## CONFIG_FILE = $RUNNER_ETC_DIR/app.config
-    CONFIG_FILE=`$ERTS_PATH/cuttlefish -s $RUNNER_LIB_DIR/{{cuttlefish_schema}} -c $RUNNER_ETC_DIR/{{cuttlefish_conf}}`
+    CONFIG_FILE=`$ERTS_PATH/cuttlefish -e $RUNNER_ETC_DIR -s $RUNNER_LIB_DIR/{{cuttlefish_schema}} -c $RUNNER_ETC_DIR/{{cuttlefish_conf}}`
     if [ "$?" -ne 0 ]; then
         echoerr "Error generating config with cuttlefish, there should be logs"
         exit 1
